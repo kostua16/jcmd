@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
  */
 public class jcmd {
     public jcmd()
-    {   String cmd="";
+    {   String cmd;
         while (true)
         {
             write(">");cmd=read();
@@ -40,7 +40,7 @@ public class jcmd {
            try {
                char r=(char)System.in.read();
                result+=r;
-           } catch (IOException e) { }
+           } catch (IOException ignored) { }
        }
         return result;
     }
@@ -68,6 +68,7 @@ public class jcmd {
     {
         System.out.println();
     }
+
     public String[] parse(String str)
     {
         StringTokenizer tokenizer=new StringTokenizer(str," ");
